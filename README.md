@@ -75,11 +75,18 @@ tsc --init
 ```
 # busca la configuración más cercana
 tsc
+# agregar un archivo de configuración
+tsc -init
+
 # Especifica un directorio que contiene la configuración
 tsc --project carpeta01
 
 # Saltear configuración y compilar un archivo
 tsc archivo.ts
+
+# Watch: se queda atento a los cambios
+tsc archivo.ts --watch
+
 ```
 
 ## Tipado
@@ -103,7 +110,6 @@ nombreVariable = valor
 Number > Boolean > String > Array
 Tuple > Enum > Any > Void
 Null > Undefined > Never >Object
-
 ## Principio de responsabilidad única
 Un archivo debería tener un propósito o responsabilidad única:
 - definir una clase
