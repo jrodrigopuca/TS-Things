@@ -88,7 +88,13 @@ tsc archivo.ts
 tsc archivo.ts --watch
 
 ```
+### opciones del compilador
 
+```
+--noImplicitAny: no deja pasar los tipo any
+--target: versión de salida
+```
+[Más opciones](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
 ## Tipado
 - Explicito: definirlo en la sintaxis
 ```
@@ -100,16 +106,21 @@ nombreVariable = valor
 ```
 
 ## Tipos
-### Number
-- Valores númericos
-- Valores hexadecimales
-- Valores binarios
-- Valores octales
+Todos los tipos en TS son subtipos de "any":
+- Tipos primitivos: boolean, number, string, enum, void (ausencia de valor de retorno)
+- Tipos de objetos: class, interface, array, literals(todo lo que no sea primitivo)
+- Tipos de parametros
+- null/undefined
+### Any y unknown
+Any es un tipo que puede ser usado expresamente para
+- Una propiedad que no existe un tipo
+- usarlo para una función
+- un método que solo devuelve un tipo string
+- Recordar que con 'any' se pierde la seguridad del tipo
 
-#Tipo de datos primitivos
-Number > Boolean > String > Array
-Tuple > Enum > Any > Void
-Null > Undefined > Never >Object
+Unknown es el tipo desconocido para propiedades que no puedes acceder o formas en las cuales no puedes llamarlas o construirlas.
+
+Any y unknown son bastantes parecidos, solo que unknown genera un error de compilación y any recién evalúa en tiempo de ejecución
 ## Principio de responsabilidad única
 Un archivo debería tener un propósito o responsabilidad única:
 - definir una clase
