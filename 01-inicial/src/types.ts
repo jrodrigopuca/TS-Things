@@ -29,7 +29,7 @@ Void:
 */
 
 function showRandom(max: number): void {
-    console.log(Math.floor(Math.random() * max));
+  console.log(Math.floor(Math.random() * max));
 }
 
 showRandom(100);
@@ -41,7 +41,7 @@ Never:
 */
 
 function handleError(message: string): never {
-    throw new Error(message);
+  throw new Error(message);
 }
 
 /* Null y Undefined
@@ -59,13 +59,13 @@ object: tipo para valores no primitivos, no es posible acceder a los valores de 
 Object: instancia de la clase Object de JS
 */
 let user: object = {
-    id: 1,
-    name: "Juan",
+  id: 1,
+  name: "Juan",
 }; //console.log(user.id) ERROR
 
 let myUser = {
-    id: 1,
-    name: "Juan",
+  id: 1,
+  name: "Juan",
 }; // console.log(myUser.id); // 1
 
 let instance = myUser instanceof Object;
@@ -80,8 +80,8 @@ player = [1, "PlayerOne"]; // console.log(players[1]) //'PlayerOne'
 
 let otherPlayer: [number, string, boolean] = [2, "Player 2", false];
 let players: [number, string][] = [
-    [1, "goalkeeper"],
-    [2, "defense"],
+  [1, "goalkeeper"],
+  [2, "defense"],
 ];
 
 /*
@@ -93,25 +93,25 @@ let players: [number, string][] = [
     console.log(Arrow[2]) //"Left"
 */
 enum Arrow {
-    Up, //0
-    Down, //1
-    Left, //2
-    Right, //3
+  Up, //0
+  Down, //1
+  Left, //2
+  Right, //3
 }
 const move: Arrow = Arrow.Up;
 
 enum OtherArrow {
-    Up = 19, //19
-    Down = 90, //90
-    Left, //91
-    Right, //92
+  Up = 19, //19
+  Down = 90, //90
+  Left, //91
+  Right, //92
 }
 
 enum OtherOtherArrow {
-    Up = "w",
-    Down = "s",
-    Left = "a",
-    Right = "d",
+  Up = "w",
+  Down = "s",
+  Left = "a",
+  Right = "d",
 }
 
 // Unión de tipos "|"
@@ -134,22 +134,22 @@ let newIdPlayer: typePlayer;
  */
 
 type Health = {
-    id_player: number;
-    points: number;
-    lastUpdate: Date;
+  id_player: number;
+  points: number;
+  lastUpdate: Date;
 };
 
 type HealthPack = {
-    restorePoints: number;
-    lastUpdate: Date;
+  restorePoints: number;
+  lastUpdate: Date;
 };
 
 type UpdateHealth = Health & HealthPack;
 const moment_20221216: UpdateHealth = {
-    id_player: 1331312,
-    points: 90,
-    restorePoints: 10,
-    lastUpdate: new Date(),
+  id_player: 1331312,
+  points: 90,
+  restorePoints: 10,
+  lastUpdate: new Date(),
 };
 
 /**

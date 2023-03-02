@@ -9,9 +9,9 @@
 function mover(velocidad: number): string;
 function mover(velocidad: string, esContinuo: boolean): string;
 function mover(velocidad: any, esContinuo?: boolean): string {
-    return typeof velocidad === "number"
-        ? `desplazando a ${velocidad} km/s`
-        : `el objeto se mueve ${esContinuo ? "continuamente" : ""} a ${velocidad}`;
+  return typeof velocidad === "number"
+    ? `desplazando a ${velocidad} km/s`
+    : `el objeto se mueve ${esContinuo ? "continuamente" : ""} a ${velocidad}`;
 }
 
 console.log(mover(12));
