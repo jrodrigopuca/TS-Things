@@ -6,6 +6,8 @@ interface CodeErrors {
   [key: number]: string;
 }
 
+// ------- Implementación ------------
+
 const httpErrors: CodeErrors = {
   400: "Bad Request",
   401: "UnAuthorized",

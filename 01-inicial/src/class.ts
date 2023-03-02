@@ -8,9 +8,8 @@
  * - protegidas: como privado pero con acceso desde clases heredadas
  * - solo lectura: readonly
  * - static: propiedad/evento visible a nivel clase
- *
- *
  */
+
 abstract class GreatItem {
   protected _id: number;
   protected _title: string;
@@ -111,7 +110,7 @@ album.addPicture(photo);
 
 // Accediendo a propiedades públicas
 album.name = "My Gallery # 12";
-// Accediendo a propiedades privadas
+// Accediendo a propiedades privadas por medio del Set
 album.description = "Cool photos";
 // Accediendo a static
 // console.log(GreatPicture.availableExtensions); //['jpg', 'png', 'gif'];

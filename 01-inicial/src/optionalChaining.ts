@@ -17,6 +17,7 @@ const picture_9089: Picture = {
 };
 
 console.log(picture_9089.author?.name ? "hay un autor" : "no hay autor");
+
 /**
  * Nullish Coallesing
  * Es una forma más simple para determinar si algo es nulo
